@@ -16,7 +16,10 @@ public class App {
         System.out.println("\nPos-Order");
         tree.posOrder();
         System.out.println("\nIn-Order");
-        tree.inOrder();
+        tree.inOrder();    
+        System.out.println("\nSize");
+        System.out.println(tree.size());
+
     }
 
 }

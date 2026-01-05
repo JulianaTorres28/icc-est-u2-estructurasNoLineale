@@ -1,12 +1,19 @@
+
 package structures.trees;
 
 import structures.nodes.Node;
 
 public class IntTree {
     private Node<Integer> root;
-    
+    private int size; 
+
+    public int size() {
+        return size; 
+    }
+
     public IntTree(){
         this.root = null;
+        this.size = 0;
     }
 
     public void insert(int value){
@@ -15,12 +22,13 @@ public class IntTree {
 
     private Node<Integer> insertRecursive(Node<Integer> current, int value){
         if (current == null) {
+            size++;                   
             return new Node<>(value);
         }
 
         if (value < current.getValue()) {
             current.setLeft(insertRecursive(current.getLeft(), value));
-        } else if(value> current.getValue()){
+        } else if (value > current.getValue()){
             current.setRight(insertRecursive(current.getRight(), value));
         }
 
@@ -29,6 +37,7 @@ public class IntTree {
 
     public void preOrder(){
         preOrderRecursive(root);
+        System.out.println(); 
     }
 
     private void preOrderRecursive(Node<Integer> node){
@@ -39,29 +48,31 @@ public class IntTree {
         }
     }
 
-    public void posOrder(){
-        posOrderRecursive(root);
-    }
-
-    private void posOrderRecursive(Node<Integer> node){
-        if (node != null) {
-        posOrderRecursive(node.getLeft());    
-        posOrderRecursive(node.getRight());     
-        System.out.print(node.getValue() + " "); 
-        }
-
-    }
-
     public void inOrder(){
         inOrderRecursive(root);
+        System.out.println();
     }
 
     private void inOrderRecursive(Node<Integer> node){
         if (node != null) {
-        inOrderRecursive(node.getLeft());        
-        System.out.print(node.getValue() + " "); 
-        inOrderRecursive(node.getRight());       
+            inOrderRecursive(node.getLeft());
+            System.out.print(node.getValue() + " ");
+            inOrderRecursive(node.getRight());
+        }
     }
 
+    public void posOrder(){
+        posOrderRecursive(root);
+        System.out.println();
     }
+
+    private void posOrderRecursive(Node<Integer> node){
+        if (node != null) {
+            posOrderRecursive(node.getLeft());
+            posOrderRecursive(node.getRight());
+            System.out.print(node.getValue() + " ");
+        }
+    }
+
+   
 }
