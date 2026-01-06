@@ -34,3 +34,30 @@ El atributo size se actualiza en el método insertRecursive cuando se crea un nu
 ![alt text](assents/size.png)
 
 Por esta razón, el método size() no necesita recorrer el árbol, simplemente retorna el contador, lo que lo hace O(1).
+
+## Práctica de Árboles - Implementación Genéricos uso de interfaces Comparabes - 06/01/26
+
+### Descripción 
+
+En esta práctica se implementó un Árbol Binario de Búsqueda genérico en Java utilizando clases Tree<T> y Node<T>. El árbol permite insertar elementos de tipo genérico T siempre que implementen la interfaz Comparable, de manera que el criterio de ordenamiento se define en los objetos almacenados (por ejemplo, la clase Person ordena por edad).
+Se desarrollaron los siguientes componentes:
+
+Inserción de elementos en el árbol respetando el orden definido por compareTo.
+Recorrido InOrder para mostrar los elementos en orden ascendente.
+Método genérico de búsqueda (search(T value)) que localiza un elemento en el árbol usando el orden natural definido por Comparable.
+Implementación específica con la clase Person para demostrar la funcionalidad, incluyendo búsqueda por edad mediante la creación de un objeto “sonda”.
+
+La salida en consola muestra:
+
+Los elementos insertados en orden (InOrder).
+El resultado de la búsqueda de una persona por edad.
+
+### Evidencias 
+
+### Captura 1
+
+![alt text](assents/busquedaGenerica.png)
+
+### Captura 2
+
+![alt text](assents/salConBusqueda.png)
