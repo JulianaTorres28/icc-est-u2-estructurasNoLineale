@@ -61,3 +61,30 @@ El resultado de la búsqueda de una persona por edad.
 ### Captura 2
 
 ![alt text](assents/salConBusqueda.png)
+
+### Práctica de Graphs – Implementación Genérica con Strings - 08/01/26 
+
+### Descripción 
+
+En esta práctica se implementó un Grafo genérico en Java utilizando las clases Graph<T> y Node<T>. El grafo permite representar relaciones entre elementos mediante nodos y aristas, utilizando una estructura interna basada en un Map<Node<T>, List<Node<T>>> para almacenar las conexiones.
+Se desarrollaron las siguientes funcionalidades:
+
+- Inserción de nodos en el grafo.
+- Inserción de aristas para conectar nodos (grafo no dirigido).
+- Impresión del grafo completo, mostrando cada nodo y sus vecinos.
+- Método para obtener los vecinos de un nodo específico, demostrando cómo acceder a las conexiones de un vértice.
+
+La implementación se probó con objetos String para representar los nombres de los nodos. La salida en consola muestra:
+
+- La estructura del grafo con sus conexiones.
+- Los vecinos del nodo A, confirmando la correcta funcionalidad del método getNeighbors.
+
+### Evidencias 
+
+### Captura 1
+
+![alt text](assents/claseGraph.png)
+
+### Captura 2
+
+![alt text](assents/impresionClaseGrafo.png)
