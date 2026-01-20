@@ -88,3 +88,7 @@ La implementación se probó con objetos String para representar los nombres de 
 ### Captura 2
 
 ![alt text](assents/impresionClaseGrafo.png)
+
+### Captura 3
+
+![alt text](assents/grafoPersonasBFSYDFS.png)
